@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Celular HSR Custom</title>
+  <link rel="stylesheet" href="telf.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+
+    <!-- VÍDEO -->
+    <div id="home" class="video-container">
+      <video id="mainVideo" src="vid/Vid2.mp4" autoplay loop muted></video>
+    </div>
+
+    <!-- CELULAR -->
+    <div class="phone hidden" id="phone">
+      <div class="header">
+        <img src="img/icon/icon.jpg" class="avatar" alt="Avatar">
+        <div>
+          <h3>VictorKnopp</h3>
+          <p>Nível de Equilíbrio 1</p>
+          <p class="uid">UID: 722160112</p>
+          <div class="exp">
+            <div class="bar"><div class="fill" style="width: 37%"></div></div>
+            <p>Nível 21 | EXP 635/1710</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENU COM LINKS E ANIMAÇÃO -->
+      <div class="menu-grid">
+        <a href="projeto.html" class="menu-item">
+          <img src="img/icon/02.jpg" alt="Projeto">
+          <span>Projeto</span>
+        </a>
+        <a href="contato.html" class="menu-item">
+          <img src="img/icon/3.jpg" alt="Contato">
+          <span>Contato</span>
+        </a>
+        <a href="sobremim.html" class="menu-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Sobre mim">
+          <span>Sobre mim</span>
+        </a>
+      </div>
+
+      <!-- BOTÕES LATERAIS -->
+      <div class="side-buttons">
+        <div class="icon">📄<span>Sobre</span></div>
+        <div class="icon">📬<span>Contato</span></div>
+        <div class="icon">🛠<span>Projeto</span></div>
+      </div>
+
+      <!-- BOTÃO POWER -->
+      <div class="power">⏻</div>
+    </div>
+
+    <!-- BOTÃO FLUTUANTE 📱 -->
+    <button id="toggle">📱</button>
+
+  </div>
+
+  <!-- SCRIPT DE TROCA -->
+  <script>
+    const toggleBtn = document.getElementById("toggle");
+    const phone = document.getElementById("phone");
+    const video = document.getElementById("home");
+
+    let showingPhone = false;
+
+    toggleBtn.addEventListener("click", () => {
+      showingPhone = !showingPhone;
+      if (showingPhone) {
+        phone.classList.remove("hidden");
+        video.classList.add("hidden");
+      } else {
+        phone.classList.add("hidden");
+        video.classList.remove("hidden");
+      }
+    });
+  </script>
+</body>
+</html>
