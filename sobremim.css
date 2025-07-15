@@ -1,0 +1,160 @@
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+.profile-card {
+  max-width: 600px;
+  margin: auto;
+  background: linear-gradient(145deg, #000000, #f589ff);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 187, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 1rem;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #e085d8;
+}
+
+.tagline {
+  color: #cccccc;
+  font-style: italic;
+}
+
+.traits ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.traits li {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.traits li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #c885e0;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+}
+
+/* NAVBAR ESTILO FLUTUANTE E TRANSPARENTE */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0); /* fundo preto translúcido */
+  backdrop-filter: blur(6px); /* efeito de desfoque elegante */
+  z-index: 50;
+}
+
+/* LISTA PRINCIPAL */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ITENS */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e616f9; /* laranja vibrante (orange-500) */
+}
+
+
+.footer .icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer .icons a {
+  color: #f916f9;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .icons a:hover {
+  color: #9c0fbb;
+  transform: scale(1.2);
+}
+
+
+/* Navbar com logo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fc4dff;
+}

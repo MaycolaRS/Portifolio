@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maycola</title>
+  <link rel="stylesheet" href="sobremim.css">
+  <link rel="shortcut icon" type="imagex/png" href="./LOGO SITE/LOGO.jfif">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b0b0b] text-white">
+  <!-- NAVBAR -->
+  <nav class="bg-black/50 backdrop-blur-sm fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="flex-shrink-0">
+            <img class="h-10 w-auto rounded-md" src="img/icon/logo.png" alt="Logo Marcos">
+          </a>
+        </div>
+        <div class="hidden md:flex space-x-8 uppercase font-semibold text-sm tracking-widest">
+          <a href="telf.html" class="hover:text-orange-500 transition">Home</a>
+          <a href="sobremim.html" class="hover:text-orange-500 transition">Sobre</a>
+          <a href="projeto.html" class="hover:text-orange-500 transition">Projeto</a>
+          <a href="contato.html" class="hover:text-orange-500 transition">Contato</a>
+        </div>
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown Mobile -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 pt-2 space-y-2 text-sm font-semibold uppercase">
+      <a href="telf.css" class="block hover:text-orange-500 transition">Home</a>
+      <a href="sobremim.html" class="block hover:text-orange-500 transition">Sobre</a>
+      <a href="projeto.html" class="block hover:text-orange-500 transition">Projeto</a>
+      <a href="contato.html" class="block hover:text-orange-500 transition">Contato</a>
+    </div>
+  </nav>
+
+  <div class="pt-24 px-4 md:px-0">
+    <div class="profile-card max-w-xl mx-auto bg-white text-black p-8 rounded-lg shadow-lg">
+      <div class="header flex items-center space-x-4 mb-6">
+        <img src="img/icon/icon avata.jfif" alt="Avatar de Marcos" class="avatar w-20 h-20 rounded-full border-2 border-white">
+        <div>
+          <h1 class="text-2xl font-bold">Marcos</h1>
+          <h2 class="text-lg text-gray-600">Analista & Programador</h2>
+          <p class="italic text-sm text-gray-500">"Codificando ideias. Moldando o impossível."</p>
+        </div>
+      </div>
+
+      <div class="traits mb-6">
+        <h3 class="text-lg font-semibold mb-2">Habilidades Técnicas</h3>
+        <ul class="list-disc pl-6 space-y-1 text-sm">
+          <li>🔧 Lógica de Programação Avançada</li>
+          <li>💡 Criação de Interfaces Web (HTML, CSS, JS)</li>
+          <li>🧠 Backend com Python e automações</li>
+          <li>📊 Análise de Dados e Modelagem</li>
+        </ul>
+      </div>
+
+      <div class="profile-info mb-6">
+        <h3 class="text-lg font-semibold mb-2">Características Pessoais</h3>
+        <p class="text-sm">Persistente, detalhista, curioso e estrategista. Gosta de construir com precisão e sempre busca entender a fundo o funcionamento das coisas.</p>
+      </div>
+
+      <div class="footer flex flex-col md:flex-row md:justify-between items-center gap-4">
+        <p class="text-sm">🌐 Disponível para projetos desafiadores e colaborações criativas.</p>
+        <div class="flex space-x-4">
+          <a href="mailto:seuemail@example.com" title="Email"><img src="img/icon/EMAIL.png" class="w-6 h-6" alt="Email"></a>
+          <a href="https://github.com/MaycolaRS" target="_blank" title="GitHub"><img src="img/icon/GITHUB.png" class="w-6 h-6" alt="GitHub"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

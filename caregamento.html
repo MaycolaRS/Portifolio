@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="shortcut icon" type="imagex/png" href="./LOGO SITE/LOGO.jfif">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maycola...</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #e0c985;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .loader {
+      border: 6px solid #333;
+      border-top: 6px solid #d702f8;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+      animation: fadein 2s ease-in-out;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader"></div>
+  <h1>Carregando... Preparando seu acesso</h1>
+
+  <script>
+    // Após 4 segundos, redireciona para a tela principal
+    setTimeout(() => {
+      window.location.href = "telf.html";
+    }, 4000); // 4 segundos
+  </script>
+
+</body>
+</html>
