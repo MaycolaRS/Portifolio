@@ -4,41 +4,180 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maycola</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" type="imagex/png" href="./LOGO SITE/LOGO.jfif">
+  <link rel="shortcut icon" type="image/png" href="logo-site/LOGO.jfif">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hidden-section { display: none; }
+    .active-section { display: block; }
+  </style>
 </head>
-<body>
+<body class="bg-black text-white font-sans">
 
-  <!-- 🌟 Logo no topo esquerdo -->
-  <div class="logo-topo">
-    <img src="./img/icon/logo.png" alt="Logo Maycola">
-  </div>
+  <!-- NAVBAR -->
+  <nav class="bg-black/60 backdrop-blur-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <a href="#home" class="flex-shrink-0">
+          <img src="img/icon/logo.png" alt="Logo Marcos" class="h-10">
+        </a>
+        <!-- Menu desktop -->
+        <div class="md:flex hidden space-x-6 items-center uppercase font-semibold text-sm tracking-widest">
+          <a href="#home" class="hover:text-orange-500">Home</a>
+          <a href="#celular" class="hover:text-orange-500">Celular</a>
+          <a href="#sobre" class="hover:text-orange-500">Sobre</a>
+          <a href="#projetos" class="hover:text-orange-500">Projetos</a>
+          <a href="#contato" class="hover:text-orange-500">Contato</a>
+        </div>
+        <!-- Botão hamburguer (mobile) -->
+        <div class="md:hidden">
+          <button id="menu-button" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 flex flex-col bg-black/90">
+      <a href="#home" class="py-2 hover:text-orange-500">Home</a>
+      <a href="#celular" class="py-2 hover:text-orange-500">Celular</a>
+      <a href="#sobre" class="py-2 hover:text-orange-500">Sobre</a>
+      <a href="#projetos" class="py-2 hover:text-orange-500">Projetos</a>
+      <a href="#contato" class="py-2 hover:text-orange-500">Contato</a>
+    </div>
+  </nav>
 
-  <!-- 🎥 HOME: VÍDEO DE FUNDO COM TEXTO -->
-  <section id="home" class="video-container">
-    <video src="vid/Vid.mp4" autoplay loop muted></video>
-
-    <div class="video-texto">
-      <h1 class="bem-vindo">Bem-vindo</h1>
-      <p class="subtexto">Você entrou em um domínio onde o desconhecido espreita atrás de cada linha de código.</p>
-      <button id="saibaMaisBtn" class="saiba-mais">Saiba mais ↓</button>
+  <!-- Seção: HOME -->
+  <section id="home" class="h-screen relative pt-20">
+    <video src="vid/Vid.mp4" autoplay loop muted class="absolute w-full h-full object-cover -z-10"></video>
+    <div class="flex flex-col items-center justify-center h-full text-center">
+      <h1 class="text-5xl font-bold mb-4">Bem-vindo</h1>
+      <p class="text-lg max-w-xl">Você entrou em um domínio onde o desconhecido espreita atrás de cada linha de código.</p>
     </div>
   </section>
 
-  <!-- Loader oculto até clique -->
-  <div id="loader" class="loader hidden"></div>
+  <!-- Seção: CELULAR -->
+  <section id="celular" class="py-24">
+    <div class="flex justify-center">
+      <div class="bg-gray-900 rounded-lg p-6 max-w-md w-full">
+        <div class="flex items-center space-x-4">
+          <img src="img/icon/icon avata.jfif" class="w-16 h-16 rounded-full" alt="Avatar">
+          <div>
+            <h3 class="text-xl font-bold">Marcos</h3>
+            <p class="text-sm">Nível de Equilíbrio 1</p>
+            <p class="text-xs text-gray-400">UID: 722160112</p>
+          </div>
+        </div>
+        <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+          <a href="#projetos" class="hover:scale-105 transition">
+            <img src="img/icon/projeto.jpg" class="w-16 h-16 rounded" />
+            <p class="mt-2 text-sm">Projeto</p>
+          </a>
+          <a href="#contato" class="hover:scale-105 transition">
+            <img src="img/icon/Contato.jfif" class="w-16 h-16 rounded" />
+            <p class="mt-2 text-sm">Contato</p>
+          </a>
+          <a href="#sobre" class="hover:scale-105 transition">
+            <img src="img/icon/02.jpg" class="w-16 h-16 rounded" />
+            <p class="mt-2 text-sm">Sobre mim</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Seção: SOBRE MIM -->
+  <section id="sobre" class="bg-white text-black py-20">
+    <div class="max-w-xl mx-auto p-8 rounded-lg shadow-lg">
+      <div class="flex items-center space-x-4 mb-6">
+        <img src="img/icon/icon avata.jfif" class="w-20 h-20 rounded-full border" alt="Avatar">
+        <div>
+          <h1 class="text-2xl font-bold">Marcos</h1>
+          <p class="text-gray-600">Analista & Programador</p>
+          <p class="italic text-sm text-gray-500">"Codificando ideias. Moldando o impossível."</p>
+        </div>
+      </div>
+      <h3 class="font-semibold mb-2">Habilidades Técnicas</h3>
+      <ul class="list-disc pl-6 text-sm mb-4">
+        <li>🔧 Lógica de Programação Avançada</li>
+        <li>💡 Interfaces Web (HTML, CSS, JS)</li>
+        <li>🧠 Backend com Python</li>
+        <li>📊 Análise de Dados</li>
+      </ul>
+      <h3 class="font-semibold mb-2">Características</h3>
+      <p class="text-sm mb-4">Persistente, detalhista, curioso e estrategista.</p>
+      <div class="flex gap-4">
+        <a href="mailto:seuemail@example.com"><img src="img/icon/EMAIL.png" class="w-6" alt="Email"></a>
+        <a href="https://github.com/MaycolaRS" target="_blank"><img src="img/icon/GITHUB.png" class="w-6" alt="GitHub"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: PROJETOS -->
+  <section id="projetos" class="py-20 bg-black">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold">LibOnline</h2>
+      <p class="max-w-2xl mx-auto text-gray-400 mt-2">Uma plataforma inclusiva para traduzir Libras em texto e voz. Acessibilidade sem fronteiras.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-6">
+      <img src="img/projeto/verdeiro projeto/1.png" alt="Projeto 1" class="rounded-lg hover:scale-105 transition" />
+      <img src="img/projeto/verdeiro projeto/escritores.png" alt="Projeto 2" class="rounded-lg hover:scale-105 transition" />
+      <img src="img/projeto/verdeiro projeto/matematicos.png" alt="Projeto 3" class="rounded-lg hover:scale-105 transition" />
+      <img src="img/projeto/verdeiro projeto/bumbamat.jpeg" alt="Projeto 4" class="rounded-lg hover:scale-105 transition" />
+    </div>
+  </section>
+
+  <!-- Seção: CONTATO -->
+  <section id="contato" class="py-20 bg-white text-black relative">
+    <div id="form-section" class="max-w-md mx-auto bg-[#fffaf0] p-8 rounded-xl border border-[#c2b49a] shadow-xl relative">
+      <h2 class="text-center text-xl font-bold text-[#3e2f1c] mb-4">Escreva sua carta</h2>
+      <form id="formulario">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required class="w-full border p-2 rounded mb-2">
+        <label for="email">Email</label>
+        <input type="email" id="email" required class="w-full border p-2 rounded mb-2">
+        <label for="assunto">Assunto</label>
+        <textarea id="assunto" rows="4" required class="w-full border p-2 rounded mb-4"></textarea>
+        <button type="submit" class="bg-[#c6a76b] text-white font-bold w-full py-2 rounded hover:bg-[#dcb67c]">Enviar Carta 💌</button>
+      </form>
+      <div id="selo" class="absolute hidden top-1/2 left-1/2 w-28 h-28 bg-contain bg-center bg-no-repeat z-20" style="background-image: url('img/selo.png'); transform: translate(-50%, -50%);"></div>
+    </div>
+    <div id="confirmacao" class="hidden fixed top-0 left-0 w-full h-full bg-[#f4efe2] text-[#3e2f1c] text-center items-center justify-center text-xl font-bold z-50">
+      Carta enviada com sucesso 💌<br>Estará nas mãos certas.
+    </div>
+  </section>
+
+  <!-- SCRIPTS -->
   <script>
-    const btn = document.getElementById('saibaMaisBtn');
-    const loader = document.getElementById('loader');
+    // Menu responsivo (hambúrguer)
+    const menuBtn = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
 
-    btn.addEventListener('click', () => {
-      loader.classList.remove('hidden');
+    // Formulário com selo + tela de confirmação
+    const form = document.getElementById('formulario');
+    const selo = document.getElementById('selo');
+    const confirmacao = document.getElementById('confirmacao');
+    const formSection = document.getElementById('form-section');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      selo.classList.remove('hidden');
       setTimeout(() => {
-        window.location.href = 'telf.html';
-      }, 2000); // 2 segundos de "carregamento"
+        formSection.classList.add('hidden');
+        confirmacao.classList.remove('hidden');
+        confirmacao.classList.add('flex');
+      }, 2000);
     });
   </script>
-
 </body>
 </html>
